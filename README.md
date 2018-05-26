@@ -1,9 +1,17 @@
-# Text + Color = texolor
-
-This package will help to print colored text on terminal window
+# Simple File handing module to reduce writing efforts
 
 ```python
-import texolor as t
-print (t.ansi_color("red","Saurabh Londhe"))
+from fileop import file
+data="saurabh londhe"
+file.create("data.txt") #creates a file
+file.write("data.txt",data) #write content to the file
+file.append("data.txt","\n Python lover") #appends data to the same file
+s=file.read("data.txt")
+print (s)
 ``` 
+output:
+``` 
+saurabh londhe
+ Python lover
+ ``` 
 
