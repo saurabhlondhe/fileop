@@ -12,11 +12,11 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/saurabhlondhe/fileop",
-    packages=['os'],
+    packages=setuptools.find_packages(),
     classifiers=(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: Linux",
+        "Operating System :: POSIX :: Linux",
     ),
 )
