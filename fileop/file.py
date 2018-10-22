@@ -126,9 +126,14 @@ please set file.name='filename' or use help(fileop.file)"""+"\033[0m")
 		except Exception as e1:
 			print (file.__error(e1))
 	#-----------------write to file----------------------------------
-	def write(data=None):
-		"""file.write("file_name.txt","data")"""
-		name=file.name
+	def write(data=None,name=None):
+		"""Write data to the file
+		need to follow syntax as 
+			>>> file.write(data="text")
+					or
+			>>> file.write("file_name.txt","data")"""
+		if name==None:
+			name=file.name
 		try:
 			with open(name,'w') as f:
 				f.write(data)
